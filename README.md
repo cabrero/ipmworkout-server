@@ -55,6 +55,7 @@ In a terminal, type the following commands:
 - Sample call:
 
 `$ curl http://127.0.0.1:5000/worktime -X POST -d "startDate=2018-01-01T10:30&endDate=2018-01-01T11:30&category=working&description=Working in my time tracker project"`
+
    Response:
 
 {
@@ -188,6 +189,7 @@ Response:
 - Sample call:
 
 `$ curl http://127.0.0.1:5000/worktime/1 -X PUT -d "startDate=2018-01-01T11:30&endDate=2018-01-01T12:30&category=studying&description=Exams"`
+
    Response:
 
 `{
@@ -222,6 +224,7 @@ Response:
 - Sample call:
 
 `$ curl http://localhost:5000/worktime/1 -X DELETE`
+
    Response:
 
 {
