@@ -21,7 +21,7 @@ In a terminal, type the following commands:
 
 `$ export FLASK_APP=server.py`
 
-`$ python -m flask run`
+`$ python3 -m flask run`
 
 ## Working with the API REST
 
