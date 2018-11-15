@@ -1,10 +1,12 @@
 from flask import Flask, request, jsonify, g
 from model import DBManager
 from utils import str_to_datetime
+from flask_cors import CORS
 
 DATABASE = 'worktime.db'
 
 app = Flask(__name__)
+CORS(app)
 
 def get_db():
     if 'db' not in g:
@@ -44,7 +46,7 @@ def insert_or_get_worktimes():
             if items is not None:
                 return jsonify(items)
             else:
-                return jsonify(dict(msg='Entries could not be retrieved')), 500           
+                return jsonify(dict(msg='Entries could not be retrieved')), 500
         else:
             return jsonify(dict(msg='Incorrect params')), 400
 
@@ -92,4 +94,3 @@ def delete_worktime(id):
 
 if __name__ == '__main__':
     app.run()
-    
