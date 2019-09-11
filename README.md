@@ -1,6 +1,6 @@
-# SimpleTracker
+# IPMWorkout
 
-A Python server that provides a API REST for time tracking.
+A Python server that provides a API REST for workouts DB.
 
 ## Requirements
 
@@ -19,11 +19,35 @@ Install the python module dependencies:
 
 In a terminal, type the following commands:
 
-`$ export FLASK_APP=server.py`
+```
+$ export FLASK_APP=server.py
+$ python3 -m flask run
+```
 
-`$ python3 -m flask run`
+Or:
+
+`$ FLASK_APP=server.py python3 -m flask run`
+
 
 ## Working with the API REST
+
+The *representation* is defined in JSON format, and the API has the
+following *endpoints*:
+
+* `/workouts/`
+* `/workouts/<id>`
+* `/workouts/<id>/exercises/`
+* `/workouts/<id>/exercises/<id>`
+
+
+Finally the following operations are available:
+
+### Retrieving workouts
+
+| Method | URI | Params |
+|--------|-----|--------|
+| GET    | /workouts | startIndex, size |
+
 
 ### Add a time entry
 
